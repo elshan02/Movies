@@ -1,0 +1,22 @@
+{
+  "name": "fanshawe-learning",
+  "version": "1.0.0",
+  "description": "This is Pantheon's recommended starting point for forking new [Drupal](https://www.drupal.org/) upstreams that work with the Platform's Integrated Composer build process. It is also the Platform's standard Drupal 9 upstream.",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^5.0.0",
+    "gulp-sass": "^6.0.1",
+    "sass": "^1.86.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://codeserver.dev.45f9627f-63ca-4abe-8e6a-4ee7b1527a65@codeserver.dev.45f9627f-63ca-4abe-8e6a-4ee7b1527a65.drush.in:2222/~/repository.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,25 @@
+uuid: fddc429e-3816-457c-924d-3807a4143ee8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_movie_rating
+    - node.type.movie
+  module:
+    - block_field
+id: node.movie.field_movie_rating
+field_name: field_movie_rating
+entity_type: node
+bundle: movie
+label: 'Movie Rating'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  selection: blocks
+  selection_settings:
+    plugin_ids:
+      movie_ratings_block: movie_ratings_block
+field_type: block_field

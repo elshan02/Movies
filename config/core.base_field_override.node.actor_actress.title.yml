@@ -1,0 +1,18 @@
+uuid: 7460d808-2626-4400-a7db-487dd0c6ca5b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.actor_actress
+id: node.actor_actress.title
+field_name: title
+entity_type: node
+bundle: actor_actress
+label: 'Full name of actor/actress'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,11 @@
+uuid: 015b3083-0d43-4bc2-a5e4-99381a762457
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.movie_card
+label: 'Movie Card'
+description: ''
+targetEntityType: node
+cache: true

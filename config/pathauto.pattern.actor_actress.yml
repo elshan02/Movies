@@ -1,0 +1,22 @@
+uuid: e1549759-7290-4fd1-adc8-fa94b1746f16
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: actor_actress
+label: Actor/Actress
+type: 'canonical_entities:node'
+pattern: '/actor_actress/[node:title]'
+selection_criteria:
+  0c872004-c8b8-4581-a541-6baa24df7ac1:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 0c872004-c8b8-4581-a541-6baa24df7ac1
+    context_mapping:
+      node: node
+    bundles:
+      actor_actress: actor_actress
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,15 @@
+const { src, dest, watch, series } = require('gulp');
+const sass = require('gulp-sass')(require('sass'));
+
+// Update the paths to your new directory
+function compileSass() {
+    return src('web/themes/northern-theme/northern_theme-master/northern_theme-master/src/sass/05-misc/custom/**/*.scss') // Correct path
+        .pipe(sass().on('error', sass.logError))
+        .pipe(dest('web/themes/northern-theme/northern_theme-master/northern_theme-master/dist/css')); // Output CSS
+}
+
+function watchFiles() {
+    watch('web/themes/northern-theme/northern_theme-master/northern_theme-master/src/sass/**/*.scss', compileSass); // Correct path
+}
+
+exports.default = series(compileSass, watchFiles);

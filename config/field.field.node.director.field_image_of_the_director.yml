@@ -1,0 +1,38 @@
+uuid: 28ed3229-b181-4411-9fdf-5c10e807960c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image_of_the_director
+    - node.type.director
+  module:
+    - image
+id: node.director.field_image_of_the_director
+field_name: field_image_of_the_director
+entity_type: node
+bundle: director
+label: 'Image of the director'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg webp'
+  max_filesize: ''
+  max_resolution: 834x1024
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image

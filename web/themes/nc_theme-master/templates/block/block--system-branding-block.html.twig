@@ -1,0 +1,39 @@
+{#
+/**
+ * @file
+ * Theme override for a branding block.
+ *
+ * Each branding element variable (logo, name, slogan) is only available if
+ * enabled in the block configuration.
+ *
+ * Available variables:
+ * - site_logo: Logo for site as defined in Appearance or theme settings.
+ * - site_name: Name for site as defined in Site information settings.
+ * - site_slogan: Slogan for site as defined in Site information settings.
+ */
+#}
+
+{% extends "block.html.twig" %}
+
+{% block content %}
+  {% if site_logo %}
+    <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="navbar-brand">
+      {% block logo_image %}
+        {% include('@nc_theme/templates/partials/site-branding.twig') with {
+          path: site_logo,
+          alt: site_name ~ ' ' ~ 'Home'|t,
+        }%}
+      {% endblock logo_image %}
+
+      {% if site_name %}
+        <div class="site-name visually-hidden">
+          <p>{{ site_name }}</p>
+        </div>
+      {% endif %}
+    </a>
+  {% endif %}
+
+  {% if site_slogan %}
+    <div class="site-slogan">{{ site_slogan }}</div>
+  {% endif %}
+{% endblock %}

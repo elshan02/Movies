@@ -1,0 +1,29 @@
+uuid: 65dac8a6-8b38-48f0-a30b-0a5b891a380d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_portrayed_by
+    - node.type.actor_actress
+    - paragraphs.paragraphs_type.quote
+id: paragraph.quote.field_portrayed_by
+field_name: field_portrayed_by
+entity_type: paragraph
+bundle: quote
+label: 'Portrayed By'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      actor_actress: actor_actress
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

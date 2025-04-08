@@ -1,0 +1,18 @@
+// SCSS file for Movie Content type
+
+.node__meta     // Submitted info
+{
+    visibility: hidden;     
+}
+
+// .field.field--name-field-movie-poster.field--type-image.field--label-hidden.field__item     // Movie Poster
+// {
+//     display: grid;
+//     grid-template-columns: auto 1fr;
+//     column-gap: 1rem;
+// }
+
+#block-nc-theme-movieratingblock        // Movie Rating custom module
+{
+    margin-left: 20%;
+}

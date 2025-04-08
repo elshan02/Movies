@@ -1,0 +1,18 @@
+uuid: 2306f28a-6509-46de-88d3-d0a2c9944ca1
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.director
+id: node.director.title
+field_name: title
+entity_type: node
+bundle: director
+label: 'Name of the director'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

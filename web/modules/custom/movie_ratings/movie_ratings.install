@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * Implements hook_schema().
+ */
+function movie_ratings_schema() {
+  $schema['movie_ratings'] = array(
+    'description' => 'Stores ratings for movies.',
+    'fields' => array(
+      'id' => array(
+        'type' => 'serial',
+        'not null' => TRUE,
+      ),
+      'movie_nid' => array(
+        'type' => 'int',
+        'not null' => TRUE,
+        'description' => 'The node ID of the rated movie.',
+      ),
+      'rating' => array(
+        'type' => 'int',
+        'not null' => TRUE,
+        'description' => 'The rating given by the user.',
+      ),
+      'timestamp' => array(
+        'type' => 'int',
+        'not null' => TRUE,
+        'description' => 'When the rating was given.',
+      ),
+    ),
+    'primary key' => array('id'),
+    'indexes' => array(
+      'movie_nid' => array('movie_nid'),
+    ),
+  );
+  return $schema;
+}

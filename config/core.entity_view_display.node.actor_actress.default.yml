@@ -1,0 +1,50 @@
+uuid: 411f7ac9-4014-48d3-8ba2-423a7e58bd43
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.actor_actress.field_image_of_the_actor_actress
+    - field.field.node.actor_actress.field_movies_and_shows
+    - field.field.node.actor_actress.field_nationality
+    - node.type.actor_actress
+  module:
+    - image
+    - user
+id: node.actor_actress.default
+targetEntityType: node
+bundle: actor_actress
+mode: default
+content:
+  field_image_of_the_actor_actress:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_movies_and_shows:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_nationality:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

@@ -1,0 +1,124 @@
+// SCSS file for Home Page and Movie Card view mode
+
+.input-group    // Search icon
+{
+    visibility: hidden;     
+}
+
+#block-nc-theme-viewmodeswitcher // Movie Genres heading
+{
+    margin-left: 140px;
+
+    h2.block-title          // Title
+    {
+        text-align: center;
+    }
+
+    p       // Movie Genres links
+    {
+        a       // Each link
+        {
+            margin: 15px;
+        }
+    }
+}
+
+h1.page-title.mt-0.mb-0  // 'Home Page' title
+{
+    font-size: 140%;
+    text-align: center;
+}
+
+h2.mt-0  // Movie content type titles
+{
+    font-size: 100%;
+    text-align: center;
+}
+
+.container  // Movie content type container
+{
+    img 
+    {
+    width: 300px;  
+    height: auto;  
+    display: block;
+    margin: 0 auto; 
+    }
+}
+
+.node__submitted  // Submission date
+{
+    visibility: hidden;
+}
+
+
+.field__label  // Movie content type 'Description' title
+{
+    text-align: center;
+}
+
+.field.field--name-field-description.field--type-string-long.field--label-above  // Movie content type 'Description' field
+{
+    margin-top: 5%;
+}
+
+.contextual-region.node.node--type-movie.node--promoted.node--view-mode-movie-card // Movie content type block
+{
+    margin: 10px;
+}
+
+
+.views-col.col-1 // Arrival movie content
+{
+    .field.field--name-field-description.field--type-string-long.field--label-above  // Description field
+    {
+        margin-top: 6%;         
+    }
+}
+
+
+.site-footer__top.pt-8.pb-8 // Footer of the website
+{
+        background-color: #8B0000;
+}
+
+.site-footer__bottom.pt-8.pb-8.pt-md-5.pt-xl-3.pb-md-3 // Bottom of the footer
+{
+        background-color: #8B0000;
+}
+
+
+    
+.field__item // Field items of Movie content type
+{
+    text-align: center;
+}
+
+#block-nc-theme-webform  //'Movie Request' Webform
+{
+    h2.block-title  // 'Movie Request' title
+    {
+        text-align: center;
+    }
+
+    #webform-submission-movie-request-form-ajax    // Webform
+    {
+        width: 50%;  
+        margin: 0 auto;     // Centralizing the webform
+    }
+
+    .progress-marker::before    // Progress Number
+    {
+        background-color: #8B0000;
+    }
+    
+    // Webform buttons
+    .webform-button--next.button.js-form-submit.form-submit.btn.btn-primary.form-control, // Next button
+    .webform-button--previous.button.js-form-submit.form-submit.btn.btn-primary.form-control, // Previous button
+    .webform-button--preview.button.js-form-submit.form-submit.btn.btn-primary.form-control,  // Preview button
+    .webform-button--submit.button.button--primary.js-form-submit.form-submit.btn.btn-primary.form-control,  // Submit button
+    .webform-button--reset.button.js-form-submit.form-submit.btn.btn-primary.form-control // Reset button
+    {
+        background-color: #8B0000;
+    }
+}

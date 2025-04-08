@@ -1,0 +1,29 @@
+uuid: 5a3756a7-8a84-4fc5-933a-0616f21ee8c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_movies_and_shows
+    - node.type.actor_actress
+    - node.type.movie
+id: node.actor_actress.field_movies_and_shows
+field_name: field_movies_and_shows
+entity_type: node
+bundle: actor_actress
+label: 'Movies and Shows'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      movie: movie
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

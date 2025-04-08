@@ -1,0 +1,23 @@
+uuid: 46165480-2dbb-4a88-a6cd-f4795edc07cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_release_year
+    - node.type.movie
+  module:
+    - yearonly
+id: node.movie.field_release_year
+field_name: field_release_year
+entity_type: node
+bundle: movie
+label: 'Release Year'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  yearonly_from: '1900'
+  yearonly_to: now
+field_type: yearonly

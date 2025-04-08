@@ -1,0 +1,31 @@
+uuid: c32506db-1d9a-4819-893a-6805f86f7fbb
+langcode: en
+status: true
+dependencies:
+  config:
+    - webform.webform.movie_request
+  module:
+    - system
+    - webform
+  theme:
+    - nc_theme
+id: nc_theme_webform
+theme: nc_theme
+region: sidebar_second
+weight: 0
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: 'Movie Request'
+  label_display: visible
+  provider: webform
+  webform_id: movie_request
+  default_data: ''
+  redirect: false
+  lazy: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

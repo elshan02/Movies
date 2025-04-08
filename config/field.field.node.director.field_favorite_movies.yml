@@ -1,0 +1,29 @@
+uuid: e5f49ce6-d5ea-4ef9-afeb-cf5b1a1f3cc8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_favorite_movies
+    - node.type.director
+    - node.type.movie
+id: node.director.field_favorite_movies
+field_name: field_favorite_movies
+entity_type: node
+bundle: director
+label: 'Favorite Movies'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      movie: movie
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function search_toggle_theme() {
+  return [
+    'search_toggle' => [
+      'variables' => [],
+      'template' => 'search-toggle',
+    ],
+  ];
+}

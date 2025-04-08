@@ -1,0 +1,297 @@
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: transparent !important;
+    box-shadow: none !important;
+    color: #000 !important;
+    text-shadow: none !important;
+  }
+  * {
+    font-size: 10pt !important;
+    line-height: 16pt !important;
+  }
+  table {
+    border: 1px solid #000 !important;
+    max-width: 100% !important;
+    table-layout: fixed !important;
+  }
+  table * {
+    border-color: #000 !important;
+    max-width: 100% !important;
+  }
+  table caption {
+    border-color: #000;
+    border-style: solid;
+    border-width: 1px 1px 0;
+  }
+  table thead {
+    -moz-column-break-inside: auto;
+         break-inside: auto;
+    display: table-header-group !important;
+  }
+  table tfoot {
+    display: table-row-group !important;
+  }
+  table tr {
+    border-bottom: 1px solid #ebebeb !important;
+    page-break-inside: avoid;
+  }
+  table th {
+    text-align: left;
+  }
+  table th:not(:last-child) {
+    border-right: 1px solid #000;
+  }
+  table td:not(:last-child) {
+    border-right: 1px solid #000;
+  }
+  table span {
+    display: inline-block !important;
+    max-width: 100% !important;
+  }
+  html,
+  body {
+    font-size: 10pt;
+    line-height: 16pt;
+  }
+  body {
+    padding: 1em;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+    padding: 0;
+    -moz-column-break-inside: avoid;
+         break-inside: avoid;
+    display: block !important;
+    margin-bottom: 1.5rem;
+    margin-top: 2rem;
+    page-break-after: avoid;
+    text-indent: 0 !important;
+    width: 100%;
+  }
+  h1,
+  #page-title,
+  h1 *,
+  #page-title * {
+    font-size: 22pt !important;
+    font-weight: bold;
+    line-height: 28pt !important;
+  }
+  h2,
+  h2 * {
+    font-size: 18pt !important;
+    font-weight: bold;
+    line-height: 24pt !important;
+  }
+  h3,
+  h3 * {
+    font-size: 16pt !important;
+    font-weight: bold;
+    line-height: 20pt !important;
+  }
+  h4,
+  h4 * {
+    font-size: 14pt !important;
+    font-weight: bold;
+    line-height: 18pt !important;
+  }
+  h5,
+  h5 * {
+    font-size: 12pt !important;
+    font-weight: bold;
+    line-height: 16pt !important;
+  }
+  h6,
+  h6 * {
+    font-weight: bold;
+  }
+  strong {
+    font-weight: 700;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  p {
+    orphans: 3;
+    widows: 3;
+  }
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+  pre,
+  blockquote {
+    font-size: 12pt;
+    font-weight: 700 !important;
+    margin-bottom: 1rem !important;
+    margin-top: 1rem !important;
+    page-break-inside: avoid;
+  }
+  pre *,
+  blockquote * {
+    font-size: 12pt;
+  }
+  form {
+    display: block !important;
+  }
+}
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  .dialog-off-canvas-main-canvas {
+    display: block !important;
+    min-height: 0 !important;
+    padding-top: 0 !important;
+  }
+  .container,
+  .region,
+  .block {
+    display: block !important;
+    margin: 0 !important;
+    max-width: none !important;
+    padding: 0 !important;
+  }
+  .table-container {
+    max-width: 100% !important;
+    overflow: visible !important;
+    position: static !important;
+  }
+  #main {
+    clear: both;
+    padding-top: 2rem !important;
+  }
+}
+@media print {
+  .block-system-breadcrumb-block {
+    display: none !important;
+  }
+  .block-page-title-block h1 {
+    margin-top: 0;
+  }
+  .region-sidebar-first .block-menu {
+    display: none !important;
+  }
+  .footer {
+    display: none !important;
+  }
+  .pager {
+    display: none !important;
+  }
+  .more-link {
+    display: none !important;
+  }
+  .field--name-body img {
+    display: none !important;
+  }
+  .mm-page {
+    padding-top: 0 !important;
+  }
+}
+@media print {
+  .iframe-container {
+    display: none !important;
+  }
+  .video-embed-field-responsive-video {
+    display: none !important;
+  }
+  .embedded-entity {
+    display: none !important;
+  }
+  .template--fancy-list .item-number {
+    font-size: 36pt !important;
+    line-height: 36pt !important;
+  }
+}
+@media print {
+  .template--accordion {
+    border-bottom: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  .template--accordion > h2 {
+    border-bottom: 0 !important;
+    border-top: 0 !important;
+    margin-bottom: 1rem !important;
+    margin-top: 2rem !important;
+    padding: 0 !important;
+  }
+  .template--accordion > h2:focus {
+    border-bottom: 0 !important;
+    border-top: 0 !important;
+  }
+  .template--accordion > h2::after {
+    display: none !important;
+  }
+  .template--accordion .accordion-content {
+    height: auto !important;
+    margin: 0 !important;
+    margin-bottom: 0 !important;
+    overflow: visible !important;
+    padding: 0 !important;
+    position: static !important;
+    width: auto !important;
+  }
+}
+@media print {
+  .block-system-branding-block {
+    display: block !important;
+  }
+  .block-system-branding-block .navbar-brand {
+    display: block;
+    position: relative;
+    width: 100%;
+  }
+  .block-system-branding-block .navbar-brand::before {
+    display: block;
+  }
+  .block-system-branding-block .navbar-brand .logo--default {
+    display: block !important;
+    height: auto !important;
+    width: 300px !important;
+  }
+  .block-system-branding-block .site-name {
+    display: none !important;
+  }
+}
+@media print {
+  .masthead {
+    padding-left: 0;
+    padding-right: 0;
+    border-bottom: 0;
+  }
+  .region-masthead-primary {
+    border-bottom: 0 !important;
+    height: auto !important;
+    padding-bottom: 2rem !important;
+    padding-top: 1.5rem !important;
+    width: 100% !important;
+  }
+  .header-rightt {
+    display: none;
+  }
+  .menu-toggle-wrapper {
+    display: none !important;
+  }
+}
+@media print {
+  .search-overlay {
+    display: none !important;
+  }
+  .block-facets {
+    display: none !important;
+  }
+  .search-view .view-header {
+    display: none !important;
+  }
+  .search-view .view-filters {
+    display: none !important;
+  }
+}
+/*# sourceMappingURL=maps/print.css.map */

@@ -1,0 +1,19 @@
+uuid: c3da5503-dac1-4b8a-8fe2-3c5a3860762f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nationality
+    - node.type.actor_actress
+id: node.actor_actress.field_nationality
+field_name: field_nationality
+entity_type: node
+bundle: actor_actress
+label: Nationality
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

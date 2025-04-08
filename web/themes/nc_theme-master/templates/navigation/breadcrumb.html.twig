@@ -1,0 +1,47 @@
+{#
+/**
+ * @file
+ * Theme override for a breadcrumb trail.
+ *
+ * Available variables:
+ * - breadcrumb: Breadcrumb trail items.
+ */
+#}
+
+{% if breadcrumb and breadcrumb|length > 2 and breadcrumb[1].url != '/node' %}
+  {{ attach_library('nc_theme/breadcrumbs') }}
+
+  {% if breadcrumb %}
+    <nav role="navigation" aria-label="breadcrumb" style="{{ breadcrumb_divider }}">
+      <ol class="breadcrumb">
+        {% for item in breadcrumb %}
+          {% if loop.first %}
+            <li class="breadcrumb-item">
+              {% if item.url %}
+                <a href="{{ item.url }}">
+                  {% include '@nc_theme/SVG/icon--home.svg.twig' %}
+                  <span>{{ item.text }}</span>
+                </a>
+              {% else %}
+                {{ item.text }}
+              {% endif %}
+            </li>
+            <li class="breadcrumb-item ellipsis-item">
+              {% include '@nc_theme/SVG/icon--breadcrumb-divider.svg.twig' %}
+              {% include '@nc_theme/SVG/icon--three-dots.svg.twig' %}
+            </li>
+          {% else %}
+            <li class="breadcrumb-item">
+              {% include '@nc_theme/SVG/icon--breadcrumb-divider.svg.twig' %}
+              {% if item.url %}
+                <a href="{{ item.url }}">{{ item.text }}</a>
+              {% else %}
+                {{ item.text }}
+              {% endif %}
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ol>
+    </nav>
+  {% endif %}
+{% endif %}

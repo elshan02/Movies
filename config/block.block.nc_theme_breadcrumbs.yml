@@ -1,0 +1,22 @@
+uuid: 8b3b8732-ca20-413b-8728-d21d8f929211
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - nc_theme
+_core:
+  default_config_hash: VhBzWb7lMRtIOg9G7VSw_0uopi-7zXeHq4vXqqV1HFE
+id: nc_theme_breadcrumbs
+theme: nc_theme
+region: alerts
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

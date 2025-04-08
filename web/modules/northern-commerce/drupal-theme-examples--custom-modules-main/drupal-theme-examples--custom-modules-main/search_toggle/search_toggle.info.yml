@@ -1,0 +1,6 @@
+name: Search Toggle
+type: module
+description: 'Provides a search toggle block.'
+core: 8.x
+core_version_requirement: ^8 || ^9 || ^11
+package: Custom

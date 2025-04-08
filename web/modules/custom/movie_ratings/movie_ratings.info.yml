@@ -1,0 +1,8 @@
+name: 'Movie Ratings'
+type: module
+description: 'A custom module to see the average rating of a movie'
+core_version_requirement: ^10 || ^11
+package: Custom
+dependencies:
+- node
+- views

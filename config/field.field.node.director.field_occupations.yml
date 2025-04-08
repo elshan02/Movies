@@ -1,0 +1,24 @@
+uuid: 9ef47316-245c-4808-a898-101e9e74435a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_occupations
+    - filter.format.basic_html
+    - node.type.director
+  module:
+    - text
+id: node.director.field_occupations
+field_name: field_occupations
+entity_type: node
+bundle: director
+label: Occupations
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+field_type: text

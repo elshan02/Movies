@@ -1,0 +1,26 @@
+uuid: 7423a64d-07fa-4b3d-b36e-9d231c486aaa
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - nc_theme
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: nc_theme_content
+theme: nc_theme
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

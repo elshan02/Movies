@@ -1,0 +1,22 @@
+uuid: d342e3a2-9e4b-4d60-aa94-783d040ea60e
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - nc_theme
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: nc_theme_help
+theme: nc_theme
+region: alerts
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }
