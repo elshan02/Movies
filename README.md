@@ -25,3 +25,21 @@ and submit a PR to that repository.
 ## Fanshawe Learning Project
 
 Access the local site at:  https://fanshawe-learning.ddev.site
+
+## Pantheon Push Commands
+
+git add .
+
+git commit -m "What changes I have done here..."
+
+git push pantheon master
+
+### For sync
+
+rsync -rvz --size-only --checksum -e 'ssh -p 2222' web/sites/default/files/ dev.45f9627f-63ca-4abe-8e6a-4ee7b1527a65@appserver.dev.45f9627f-63ca-4abe-8e6a-4ee7b1527a65.drush.in:files/
+
+
+### If I changed the database
+
+ddev export-db --file=drupal.sql
+terminus drush fanshawe-learning.dev -- sqlc < drupal.sql.gz
