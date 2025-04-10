@@ -1,45 +1,30 @@
-# Composer-enabled Drupal template
+# My First Drupal Website on DDEV
 
-This is Pantheon's recommended starting point for forking new [Drupal](https://www.drupal.org/) upstreams
-that work with the Platform's Integrated Composer build process. It is also the
-Platform's standard Drupal 9 upstream.
+This project represents my work on a **Drupal website** that I built during and after my training with **Northern Commerce**. It includes a variety of features and customizations that I worked on, such as:
 
-Unlike with earlier Pantheon upstreams, files such as Drupal Core that you are
-unlikely to adjust while building sites are not in the main branch of the 
-repository. Instead, they are referenced as dependencies that are installed by
-Composer.
+## Key Features:
+- **Content Management:**
+  - Created custom content types and structured content for the website.
+  - Developed and styled custom **view modes** to display content in a variety of ways.
+  - Configured **taxonomies** to help categorize and tag content effectively.
 
-For more information and detailed installation guides, please visit the
-Integrated Composer Pantheon documentation: https://pantheon.io/docs/integrated-composer
+- **Customization:**
+  - Stylized **view modes** using SCSS to ensure responsive and visually appealing layouts.
+  - Installed and configured several essential **modules** to extend functionality.
 
-## Contributing
+- **Custom Development:**
+  - Created custom **modules** for specific functionality required by the site.
+  - Integrated custom modules as fields within the content types to enhance user experience.
 
-Contributions are welcome in the form of GitHub pull requests. However, the
-`pantheon-upstreams/drupal-composer-managed` repository is a mirror that does not
-directly accept pull requests.
+- **User Interaction:**
+  - Added a **webform** to allow users to submit requests, improving interactivity.
 
-Instead, to propose a change, please fork [pantheon-systems/drupal-composer-managed](https://github.com/pantheon-systems/drupal-composer-managed)
-and submit a PR to that repository.
+## Pantheon Link:
+- [View the live website on Pantheon.io](https://dev-fanshawe-learning.pantheonsite.io/)
 
+## Local Development:
+- This project is set up locally with **DDEV** to replicate the production environment for easy local development and testing.
 
-## Fanshawe Learning Project
+---
 
-Access the local site at:  https://fanshawe-learning.ddev.site
-
-## Pantheon Push Commands
-
-git add .
-
-git commit -m "What changes I have done here..."
-
-git push pantheon master
-
-### For sync
-
-rsync -rvz --size-only --checksum -e 'ssh -p 2222' web/sites/default/files/ dev.45f9627f-63ca-4abe-8e6a-4ee7b1527a65@appserver.dev.45f9627f-63ca-4abe-8e6a-4ee7b1527a65.drush.in:files/
-
-
-### If I changed the database
-
-ddev export-db --file=drupal.sql
-terminus drush fanshawe-learning.dev -- sqlc < drupal.sql.gz
+Thank you for checking out this project! Feel free to reach out if you have any questions or would like to collaborate.
