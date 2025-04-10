@@ -1,4 +1,4 @@
-# My First Drupal Website on DDEV
+# My First Drupal Website
 
 This project represents my work on a **Drupal website** that I built during and after my training with **Northern Commerce**. It includes a variety of features and customizations that I worked on, such as:
 
