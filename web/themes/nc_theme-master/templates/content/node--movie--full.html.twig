@@ -102,4 +102,11 @@
   {% include '@nc_theme/templates/content/node--full--standard.twig' %}
   {# For convenience, a `node--full--banner.twig` template exists and can be include with the following instead of the standard layout above. #}
 {#  {% include '@nc_theme/templates/content/node--full--banner.twig' %}#}
+
+<a href="{{ path('movie_ratings.rate_movie', {'nid': node.id()}) }}" class="btn btn-primary">
+  Rate
+</a>
+
+
 {% endblock content %}
+

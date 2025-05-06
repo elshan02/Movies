@@ -4,10 +4,10 @@ namespace Drupal\movie_ratings\Form;
 
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
-// Option 2
 use Drupal\node\Entity\Node;
-// Option 3
 use Drupal\Core\Database\Database;
+use Drupal\Core\Url;
+use Drupal\Core\Link;
 
 /**
  * Create a form to accept ratings
@@ -132,6 +132,15 @@ class MovieRatingsForm extends FormBase {
                 '#type' => 'submit',
                 '#value' => $this->t('Submit')
             ];
+
+            $form['link'] = [
+                '#type' => 'link',
+                '#title' => $this->t('Go back to movie'),
+                '#url' => Url::fromRoute('entity.node.canonical', ['node' => $nid]),
+                '#attributes' => [
+                    'class' => ['button', 'back-button-class'],
+                ],
+            ];
         }
         return $form;
  }
@@ -140,44 +149,25 @@ class MovieRatingsForm extends FormBase {
     $rating = $form_state->getValue('rating');
     $nid = $form_state->getValue('nid');
     $timestamp = time();
+    $uid = \Drupal::currentUser()->id();
 
     // Starting pushing submission into our database
 
     $connection = Database::getConnection();
+
     $connection->insert('movie_ratings')->fields([
         'movie_nid' => $nid,
+        'user_id' => $uid,
         'rating' => $rating,
         'timestamp' => $timestamp,
     ])
     ->execute();
 
+    $node = Node::load($nid);
+    if($node) {
+        \Drupal\Core\Cache\Cache::invalidateTags(['movie_rating:' . $nid]);
+    }
+
     \Drupal::messenger()->addMessage($this->t('Thank you for your rating!'));
  }
-    
-    // public function build() {
-    //     $route_match = \Drupal::routeMatch();
-    //     $nid = $route_match->getParameter('nid'); // Get nid directly
-    
-    //     if (!$nid) {
-    //         \Drupal::messenger()->addError($this->t('No valid node ID found in the route.'));
-    //         return [];
-    //     }
-    
-    //     $node = Node::load($nid);
-    //     if ($node) {
-    //         \Drupal::messenger()->addStatus($this->t('Node found: @id', ['@id' => $node->id()]));
-    //     } else {
-    //         \Drupal::messenger()->addError($this->t('No node found.'));
-    //         return [];
-    //     }
-    
-    //     if ($node instanceof \Drupal\node\NodeInterface && $node->getType() == 'movie') {
-    //         return \Drupal::formBuilder()->getForm('Drupal\movie_ratings\Form\MovieRatingsForm', $nid);
-    //     }
-    
-    //     return [];
-    // }
-    
-    
-    
 }

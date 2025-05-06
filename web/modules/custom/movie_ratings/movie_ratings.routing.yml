@@ -1,7 +1,7 @@
 movie_ratings.rate_movie:
   path: '/rate-movie/{nid}'
   defaults:
-    _form: 'Drupal\movie_ratings\Form\MovieRatingsForm'
+    _form: '\Drupal\movie_ratings\Form\MovieRatingsForm'
     _title: 'Rate this movie'
   requirements:
     _permission: 'access content'

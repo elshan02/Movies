@@ -1,0 +1,17 @@
+{#
+    Custom block template for the menu block 'Main Navigation'.
+#}
+
+<nav{{ attributes }}>
+  <div class="menu-wrapper">
+    <h2 class="main_navigation">{{ label }}</h2>
+
+    <div class="menu-inner">
+      {{ content }}
+    </div>
+
+    <div class="menu-footer">
+      {# Optional: you can put extra HTML or blocks here #}
+    </div>
+  </div>
+</nav>
