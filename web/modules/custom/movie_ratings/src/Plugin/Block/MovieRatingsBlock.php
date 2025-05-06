@@ -3,13 +3,13 @@
 namespace Drupal\movie_ratings\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
-
-// Option 3
 use Drupal\Core\Database\Database;
-
 use Drupal\Core\Form\FormInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use Drupal\Core\Cache\Cache;
+use Drupal\node\Entity\Node;
+use Drupal\Core\Cache\CacheableMetadata;
 
 /**
  * Provides a Movie Ratings Block.
@@ -54,17 +54,32 @@ class MovieRatingsBlock extends BlockBase {
       if ($total_number > 0) {         // Calculating the average
         $average = round($sum / $total_number, 1);
       }
-
-      $form = \Drupal::formBuilder()->getForm('Drupal\movie_ratings\Form\MovieRatingsForm',$nid);
       
       return // Output of Average
       [  
-        'rating' => [
-          '#markup' => $this->t('Movie Rating: @avg', ['@avg' => $average]), 
+        '#type' => 'container',
+        '#attributes' => ['class' => ['movie-rating-average']],
+        'average' => [
+
+        '#markup' => $this->t('Average Rating: @avg / 5', ['@avg' => $average]),
         ],
-        'form' => $form,
+        '#cache' => [
+          'tags' => $node->getCacheTags(),
+        ],
       ];
     }
     return [];
+  }
+
+  public function getCacheTags() {
+    $node = \Drupal::routeMatch()->getParameter('node');
+    if ($node instanceof \Drupal\node\NodeInterface && $node->getType() == 'movie') {
+      return ['movie_rating:' . $node->id()];
+    }
+    return parent::getCacheTags();
+  }
+
+  public function getCacheContexts() {
+    return ['route'];
   }
 }

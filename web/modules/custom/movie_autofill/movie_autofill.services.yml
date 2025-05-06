@@ -1,0 +1,10 @@
+services:
+  movie_autofill.tmdb_service:
+    class: 'Drupal\movie_autofill\Service\TmdbService'
+    arguments: ['@http_client']
+  
+  movie_autofill.youtube_service:
+    class: 'Drupal\movie_autofill\Service\YouTubeService'
+    arguments: ['@http_client']
+
+    

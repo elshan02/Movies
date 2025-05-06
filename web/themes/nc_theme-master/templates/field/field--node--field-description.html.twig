@@ -1,0 +1,14 @@
+{#
+    Custom template for the 'field_description' field on node and movie card view mode.
+#}
+
+<div{{ attributes.addClass('field__description') }}>
+    {% if label %}
+        <div class="field__label__description">{{ label }}</div>
+    {% endif %}
+    <div class="field__item">
+        {{ items.0.content }}
+    </div>
+</div>
+
+<hr class="field-separator">

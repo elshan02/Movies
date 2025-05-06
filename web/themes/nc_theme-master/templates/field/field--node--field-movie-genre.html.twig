@@ -1,0 +1,24 @@
+{#
+  Custom template for the 'field_movie_genre' field on node and movie card view mode.
+#}
+{%
+  set classes = [
+    'field',
+    'field--name-' ~ field_name|clean_class,
+    'field--type-' ~ field_type|clean_class,
+    'field--label-' ~ label_display,
+    'clearfix',
+  ]
+%}
+{%
+  set title_classes = [
+    'field__label',
+    label_display == 'inline' ? 'inline',
+  ]
+%}
+
+<ul class='movie-genres'>
+    {% for item in items %}
+        <li>{{ item.content }}</li>
+    {% endfor %}
+</ul>

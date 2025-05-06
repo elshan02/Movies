@@ -5,22 +5,15 @@
     visibility: hidden;     
 }
 
-#block-nc-theme-viewmodeswitcher // Movie Genres heading
+#block-nc-theme-mainnavigation  // Main navigation
 {
-    margin-left: 140px;
+    text-align: center;
+    margin-left: 16rem;
+}
 
-    h2.block-title          // Title
-    {
-        text-align: center;
-    }
-
-    p       // Movie Genres links
-    {
-        a       // Each link
-        {
-            margin: 15px;
-        }
-    }
+#superfish-main             // Quick Links
+{
+    margin-left: 6rem;
 }
 
 h1.page-title.mt-0.mb-0  // 'Home Page' title
@@ -39,9 +32,8 @@ h2.mt-0  // Movie content type titles
 {
     img 
     {
-    width: 300px;  
+    width: 280px;  
     height: auto;  
-    display: block;
     margin: 0 auto; 
     }
 }

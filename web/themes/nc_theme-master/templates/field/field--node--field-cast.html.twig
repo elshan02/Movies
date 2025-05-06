@@ -1,0 +1,17 @@
+{#
+  Custom template for the 'field_stars' field on node.
+#}
+
+<div{{ attributes.addClass('field__stars') }}>
+    {% if label %}
+        <div class="field__label__stars">{{ label }}</div>
+    {% endif %}
+
+    <ul class='movie-stars'>
+        {% for item in items %}
+            <li>{{ item.content }}</li>
+        {% endfor %}
+    </ul>
+</div>
+
+<hr class="field-separator">
