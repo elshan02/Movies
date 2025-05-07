@@ -1366,14 +1366,6 @@ h2.mt-0 {
   margin-top: 6%;
 }
 
-.site-footer__top.pt-8.pb-8 {
-  background-color: #8B0000;
-}
-
-.site-footer__bottom.pt-8.pb-8.pt-md-5.pt-xl-3.pb-md-3 {
-  background-color: #8B0000;
-}
-
 .field__item {
   text-align: center;
 }
@@ -1384,16 +1376,6 @@ h2.mt-0 {
 #block-nc-theme-webform #webform-submission-movie-request-form-ajax {
   width: 50%;
   margin: 0 auto;
-}
-#block-nc-theme-webform .progress-marker::before {
-  background-color: #8B0000;
-}
-#block-nc-theme-webform .webform-button--next.button.js-form-submit.form-submit.btn.btn-primary.form-control,
-#block-nc-theme-webform .webform-button--previous.button.js-form-submit.form-submit.btn.btn-primary.form-control,
-#block-nc-theme-webform .webform-button--preview.button.js-form-submit.form-submit.btn.btn-primary.form-control,
-#block-nc-theme-webform .webform-button--submit.button.button--primary.js-form-submit.form-submit.btn.btn-primary.form-control,
-#block-nc-theme-webform .webform-button--reset.button.js-form-submit.form-submit.btn.btn-primary.form-control {
-  background-color: #8B0000;
 }
 
 .node__meta {
