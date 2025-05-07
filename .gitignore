@@ -98,3 +98,6 @@
 
 # Ignore NOTES.md this file for private notes
 NOTES.md
+
+# Ignore .env file for api keys
+.env

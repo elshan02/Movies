@@ -41,7 +41,8 @@
         "drupal/asset_injector": "^2.21",
         "drupal/superfish": "^1.11",
         "drupal/jquery_ui": "^1.7",
-        "drupal/tb_megamenu": "^1.9"
+        "drupal/tb_megamenu": "^1.9",
+        "vlucas/phpdotenv": "^5.6"
     },
     "require-dev": {
         "drupal/core-dev": "^11"

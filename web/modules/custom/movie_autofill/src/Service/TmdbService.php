@@ -2,6 +2,7 @@
 namespace Drupal\movie_autofill\Service;
 
 use GuzzleHttp\ClientInterface;
+use Dotenv\Dotenv;
 
 class TmdbService {
 
@@ -10,7 +11,13 @@ class TmdbService {
 
     public function __construct(ClientInterface $http_client) {
         $this->httpClient = $http_client;
-        $this->apiKey = '03bbac179d1060162119b8de94bb3d0f';
+
+        // Load envoriment variables from .env file
+        $dotenv = Dotenv::createImmutable(__DIR__ . '/../../../../../../');
+        $dotenv->load();
+
+        // Fetch api keys from envoriment variables
+        $this->apiKey = $_ENV['TMDB_API_KEY'];
     }
 
     public function getPosterUrl($title) {

@@ -3,6 +3,7 @@
 namespace Drupal\movie_autofill\Service;
 
 use GuzzleHttp\ClientInterface;
+use Dotenv\Dotenv;
 
 class YouTubeService {
   protected $httpClient;
@@ -10,7 +11,13 @@ class YouTubeService {
 
   public function __construct(ClientInterface $http_client) {
     $this->httpClient = $http_client;
-    $this->apiKey = 'AIzaSyD3YMAL_JNVmKvSvydi5y6i7i9NwqlKXqg';
+
+    // Load envoriment variables from .env file
+    $dotenv = Dotenv::createImmutable(__DIR__ . '/../../../../../../');
+    $dotenv->load();
+
+    // Fetch api keys from envoriment variables
+    $this->apiKey = $_ENV['YT_API_KEY'];
   }
 
   /**
