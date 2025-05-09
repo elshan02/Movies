@@ -51,6 +51,7 @@
         "drupal/drupal": "*"
     },
     "minimum-stability": "beta",
+    "minimum-stability": "beta",
     "prefer-stable": true,
     "extra": {
         "drupal-scaffold": {
@@ -83,6 +84,9 @@
         "enable-patching": true
     },
     "autoload": {
+        "psr-4": {
+            "Drupal\\movie_autofill\\": "web/modules/custom/movie_autofill/src/"
+        },
         "psr-4": {
             "Drupal\\movie_autofill\\": "web/modules/custom/movie_autofill/src/"
         },
