@@ -22,6 +22,7 @@ jobs:
         pantheon_repo: '${{ secrets.PANTHEON_REPO }}'
         pantheon_site_name: '${{ secrets.PANTHEON_SITE_NAME }}'
       run: |
+        set -x
         echo ${{ secrets.KNOWN_HOSTS }}
         git remote add pantheon $pantheon_repo
         git push pantheon HEAD:master
