@@ -1317,10 +1317,6 @@ main [id] {
   background-color: #8B0000;
 }
 
-.input-group {
-  visibility: hidden;
-}
-
 #block-nc-theme-mainnavigation {
   text-align: center;
   margin-left: 16rem;
