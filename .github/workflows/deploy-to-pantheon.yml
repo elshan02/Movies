@@ -29,3 +29,6 @@ jobs:
         commit_message=$(git log -1 --pretty=%B)
         terminus env:deploy $pantheon_site_name.test --note="Automated deploy: $commit_message"
         terminus env:deploy $pantheon_site_name.live --note="Automated deploy: $commit_message"
+
+# <!-- Test change for Git -->
+
