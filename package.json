@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "This is Pantheon's recommended starting point for forking new [Drupal](https://www.drupal.org/) upstreams that work with the Platform's Integrated Composer build process. It is also the Platform's standard Drupal 9 upstream.",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "dotenv": "^16.5.0"
+  },
   "devDependencies": {
     "gulp": "^5.0.0",
     "gulp-sass": "^6.0.1",

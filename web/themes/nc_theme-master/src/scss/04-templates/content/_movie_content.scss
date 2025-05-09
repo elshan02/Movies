@@ -5,14 +5,124 @@
     visibility: hidden;     
 }
 
-// .field.field--name-field-movie-poster.field--type-image.field--label-hidden.field__item     // Movie Poster
-// {
-//     display: grid;
-//     grid-template-columns: auto 1fr;
-//     column-gap: 1rem;
-// }
-
-#block-nc-theme-movieratingblock        // Movie Rating custom module
+.main_navigation
 {
+    position: relative;
+    left: 40px;
+}
+
+.block-title        // Movie Average Rating block title
+{
+    visibility: hidden;
+    margin-bottom: 0;
+    height: 60px;
+}
+
+div[region="content"]
+{
+    width: 200px;
+}
+
+#block-nc-theme-movieratingblock       // Average movie rating custom block
+{
+    left: 40rem;
+    width: 100px;
+    height: 100px;
+}
+
+
+.field.field--name-field-media-oembed-video.field--type-string.field--label-hidden.field__item // Node Movie Trailer
+{
+    width: 61%;  
+    height: auto;  
+    margin-left: 25rem;  
+}
+.field.field--name-field-movie-poster-node.field--type-image.field--label-hidden.field__item // Node Movie Poster
+{
+    float: left;
+    margin: 1px;
+    margin-left: 117px;
+}
+
+.movie-genres       // Movie Genres field
+{
+    padding-bottom: 20px;
+    margin-left: 5rem;
+}
+
+.movie-genres li, // Movie Genres items
+.movie-stars li        
+{
+    float: left;
+    flex-wrap: wrap;
+}
+
+.movie-stars    // Movie Stars ul class
+{
+    position: relative;
+    list-style-type: none;
+    bottom: 10px;
+}
+
+.movie-stars li
+{
+    margin: 10px;
+}
+
+.field__director,   // Director field
+.field__stars        // Cast field
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.field__stars
+{
+    height: 40px;
+}
+
+.field__items       // Each fields' contents
+{
+    margin-left: 20px;
+}
+
+.field-separator        // Separator used after director and content fields
+{
+    margin: 1%;
+    margin-top: 5px;
+}
+
+
+.field__label__description      // Description field label
+{
+    visibility: hidden;
+}
+
+#block-nc-theme-movieratingblock        // Movie Rating custom block
+{
+    margin: 0;
     margin-left: 20%;
+}
+
+.btn.btn-primary        // Rate button
+{
+    position: absolute;
+    bottom: 17rem;
+    right: 18rem;
+}
+
+.button.js-form-submit.form-submit.btn.btn-primary.form-control     // Submit button
+{
+    position: inherit;
+}
+
+.button.back-button-class       // Go back movie link
+{
+    margin: 10px;
+}
+
+.field__release_year  // Release year
+{
+    display: flex;
+    gap: 0.5rem;
 }

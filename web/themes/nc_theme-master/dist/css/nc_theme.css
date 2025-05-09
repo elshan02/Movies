@@ -1321,14 +1321,13 @@ main [id] {
   visibility: hidden;
 }
 
-#block-nc-theme-viewmodeswitcher {
-  margin-left: 140px;
-}
-#block-nc-theme-viewmodeswitcher h2.block-title {
+#block-nc-theme-mainnavigation {
   text-align: center;
+  margin-left: 16rem;
 }
-#block-nc-theme-viewmodeswitcher p a {
-  margin: 15px;
+
+#superfish-main {
+  margin-left: 6rem;
 }
 
 h1.page-title.mt-0.mb-0 {
@@ -1342,9 +1341,8 @@ h2.mt-0 {
 }
 
 .container img {
-  width: 300px;
+  width: 280px;
   height: auto;
-  display: block;
   margin: 0 auto;
 }
 
@@ -1368,14 +1366,6 @@ h2.mt-0 {
   margin-top: 6%;
 }
 
-.site-footer__top.pt-8.pb-8 {
-  background-color: #8B0000;
-}
-
-.site-footer__bottom.pt-8.pb-8.pt-md-5.pt-xl-3.pb-md-3 {
-  background-color: #8B0000;
-}
-
 .field__item {
   text-align: center;
 }
@@ -1387,23 +1377,110 @@ h2.mt-0 {
   width: 50%;
   margin: 0 auto;
 }
-#block-nc-theme-webform .progress-marker::before {
-  background-color: #8B0000;
-}
-#block-nc-theme-webform .webform-button--next.button.js-form-submit.form-submit.btn.btn-primary.form-control,
-#block-nc-theme-webform .webform-button--previous.button.js-form-submit.form-submit.btn.btn-primary.form-control,
-#block-nc-theme-webform .webform-button--preview.button.js-form-submit.form-submit.btn.btn-primary.form-control,
-#block-nc-theme-webform .webform-button--submit.button.button--primary.js-form-submit.form-submit.btn.btn-primary.form-control,
-#block-nc-theme-webform .webform-button--reset.button.js-form-submit.form-submit.btn.btn-primary.form-control {
-  background-color: #8B0000;
-}
 
 .node__meta {
   visibility: hidden;
 }
 
+.main_navigation {
+  position: relative;
+  left: 40px;
+}
+
+.block-title {
+  visibility: hidden;
+  margin-bottom: 0;
+  height: 60px;
+}
+
+div[region=content] {
+  width: 200px;
+}
+
 #block-nc-theme-movieratingblock {
+  left: 40rem;
+  width: 100px;
+  height: 100px;
+}
+
+.field.field--name-field-media-oembed-video.field--type-string.field--label-hidden.field__item {
+  width: 61%;
+  height: auto;
+  margin-left: 25rem;
+}
+
+.field.field--name-field-movie-poster-node.field--type-image.field--label-hidden.field__item {
+  float: left;
+  margin: 1px;
+  margin-left: 117px;
+}
+
+.movie-genres {
+  padding-bottom: 20px;
+  margin-left: 5rem;
+}
+
+.movie-genres li,
+.movie-stars li {
+  float: left;
+  flex-wrap: wrap;
+}
+
+.movie-stars {
+  position: relative;
+  list-style-type: none;
+  bottom: 10px;
+}
+
+.movie-stars li {
+  margin: 10px;
+}
+
+.field__director,
+.field__stars {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.field__stars {
+  height: 40px;
+}
+
+.field__items {
+  margin-left: 20px;
+}
+
+.field-separator {
+  margin: 1%;
+  margin-top: 5px;
+}
+
+.field__label__description {
+  visibility: hidden;
+}
+
+#block-nc-theme-movieratingblock {
+  margin: 0;
   margin-left: 20%;
+}
+
+.btn.btn-primary {
+  position: absolute;
+  bottom: 17rem;
+  right: 18rem;
+}
+
+.button.js-form-submit.form-submit.btn.btn-primary.form-control {
+  position: inherit;
+}
+
+.button.back-button-class {
+  margin: 10px;
+}
+
+.field__release_year {
+  display: flex;
+  gap: 0.5rem;
 }
 
 .views-field.views-field-title {

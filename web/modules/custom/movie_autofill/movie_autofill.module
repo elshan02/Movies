@@ -1,0 +1,112 @@
+<?php
+
+use Drupal\file\Entity\File;
+use Drupal\node\NodeInterface;
+
+/**
+ * Implements hook_entity_presave().
+ */
+function movie_autofill_entity_presave(\Drupal\Core\Entity\EntityInterface $entity) {
+  // Check if entity node or a movie bundle
+  if ($entity instanceof NodeInterface && $entity->bundle() === 'movie') {
+    // Store the title of movie
+    $title = $entity->getTitle();
+
+    // Poster logic
+
+      // If statement for checking field is new or empty
+    if ($entity->isNew() || $entity->get('field_movie_poster')->isEmpty() || $entity->get('field_movie_poster_node')->isEmpty()) {
+      // Ask movie poster based on its title 
+      $tmdb = \Drupal::service('movie_autofill.tmdb_service');
+      $poster_url = $tmdb->getPosterUrl($title);
+
+      // Download the poster from internet
+      if ($poster_url) {
+        $client = \Drupal::httpClient();
+        $response = $client->get($poster_url);
+        if ($response->getStatusCode() === 200) {
+          $data = $response->getBody()->getContents();
+
+          $filename = 'poster_' . md5($title . time()) . '.jpg';
+          $file_path = 'public://' . $filename;
+          file_put_contents($file_path, $data);
+
+          $file = File::create([
+            'uri' => $file_path,
+            'status' => 1,
+          ]);
+          $file->save();
+
+          $entity->set('field_movie_poster', [
+            'target_id' => $file->id(),
+            'alt' => $title . ' Poster',
+          ]);
+          
+          $entity->set('field_movie_poster_node', [
+            'target_id' => $file->id(),
+            'alt' => $title . ' Poster',
+          ]);
+        }
+      }
+    }
+
+    
+    // Trailer logic
+
+      // If statement for checking field is new or empty
+    if ($entity->isNew() || $entity->get('field_movie_trailer')->isEmpty()) {
+      $yt = \Drupal::service('movie_autofill.youtube_service');   // Youtube Service
+      $video_url = $yt->getTrailerUrl($title);
+
+      if ($video_url) {
+        $media = \Drupal\media\Entity\Media::create([
+          'bundle' => 'remote_video',
+          'name' => $title . ' Trailer',
+          'field_media_oembed_video' => $video_url,
+          'status' => 1,
+        ]);
+        $media->save();
+
+        $entity->set('field_movie_trailer', [
+          'target_id' => $media->id(),
+        ]);
+      }
+    }
+
+    // Description logic
+
+      // If statement for checking field is new or empty
+    if ($entity->isNew() || $entity->get('field_description')->isEmpty()) { 
+        $ds = \Drupal::service('movie_autofill.tmdb_service');    // Description Service
+        $overview = $ds->getDescription($title);          // Fetch description
+
+        if ($overview) {
+          $entity->set('field_description', $overview);
+      }
+    }
+
+    // Genre logic
+
+      // If statement for checking field is new or empty
+      if ($entity->isNew() || $entity->get('field_movie_genre')->isEmpty()) {
+        $gs = \Drupal::service('movie_autofill.tmdb_service'); // Genre Service
+        $genre = $gs->getGenreIds($title);   // Fetch Movie Genre
+
+       if(!empty($genre)) {
+        $terms = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadByProperties([
+          'vid' => 'genres',
+          'field_tmdb_genre_id' => $genre,
+        ]);
+
+        if (!empty($terms)) {
+          $target_ids = [];
+          foreach ($terms as $term) {
+            $target_ids[] = ['target_id' => $term->id()];
+          }
+          $entity->set('field_movie_genre', $target_ids);
+        }
+       }
+      }
+  }
+}
+

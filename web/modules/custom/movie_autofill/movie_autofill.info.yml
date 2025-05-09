@@ -1,0 +1,8 @@
+name: 'Movie Autofill'
+type: module
+description: 'A custom module that automatically fills movie poster and trailer based on title.'
+core_version_requirement: ^10 || ^11
+package: Custom
+dependencies:
+- node
+- views

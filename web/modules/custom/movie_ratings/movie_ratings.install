@@ -16,6 +16,11 @@ function movie_ratings_schema() {
         'not null' => TRUE,
         'description' => 'The node ID of the rated movie.',
       ),
+      'user_id' => array(
+        'type' => 'int',
+        'not null' => TRUE,
+        'description' => 'The user ID of the rated movie.',
+      ),
       'rating' => array(
         'type' => 'int',
         'not null' => TRUE,

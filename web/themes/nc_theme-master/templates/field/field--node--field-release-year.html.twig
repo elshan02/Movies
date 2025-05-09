@@ -1,0 +1,12 @@
+{#
+    Custom template for the 'field_release_year' field on node and movie card view mode.
+#}
+
+<div{{ attributes.addClass('field__release_year') }}>
+    {% if label %}
+        <div class="field__label__release_year">{{ label }}</div>
+    {% endif %}
+    <div class="field__item__release_year">
+        {{ items.0.content }}
+    </div>
+</div>

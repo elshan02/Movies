@@ -27,7 +27,22 @@
         "drupal/webform": "^6.3@beta",
         "drupal/bootstrap_barrio": "^5.5",
         "drupal/cache_control_override": "^2.0",
-        "drupal/block_field": "^1.0@RC"
+        "drupal/block_field": "^1.0@RC",
+        "drupal/feeds": "^3.0",
+        "drupal/feeds_ex": "^1.0@beta",
+        "drupal/tamper": "^1.0@beta",
+        "drupal/token": "^1.15",
+        "drupal/taxonomy_manager": "^2.0",
+        "drupal/restui": "^1.22",
+        "drupal/fitvids": "^2.1",
+        "drupal/feeds_tamper": "^2.0@beta",
+        "drupal/ds": "^3.28",
+        "drupal/image_effects": "^4.0",
+        "drupal/asset_injector": "^2.21",
+        "drupal/superfish": "^1.11",
+        "drupal/jquery_ui": "^1.7",
+        "drupal/tb_megamenu": "^1.9",
+        "vlucas/phpdotenv": "^5.6"
     },
     "require-dev": {
         "drupal/core-dev": "^11"
@@ -35,7 +50,7 @@
     "conflict": {
         "drupal/drupal": "*"
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "beta",
     "prefer-stable": true,
     "extra": {
         "drupal-scaffold": {
@@ -68,6 +83,9 @@
         "enable-patching": true
     },
     "autoload": {
+        "psr-4": {
+            "Drupal\\movie_autofill\\": "web/modules/custom/movie_autofill/src/"
+        },
         "classmap": ["upstream-configuration/scripts/ComposerScripts.php"]
     },
     "scripts": {
