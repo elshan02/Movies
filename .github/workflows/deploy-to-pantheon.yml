@@ -27,6 +27,8 @@ jobs:
         set -x
         echo ${{ secrets.KNOWN_HOSTS }}
         git remote add pantheon $pantheon_repo
+        git fetch pantheon
+        git merge pantheon/master --allow-unrelated-histories --no-edit
         git push pantheon HEAD:master
         commit_message=$(git log -1 --pretty=%B)
         terminus env:deploy $pantheon_site_name.test --note="Automated deploy: $commit_message"
