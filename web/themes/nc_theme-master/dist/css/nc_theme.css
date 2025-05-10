@@ -1288,16 +1288,6 @@ main [id] {
   width: 50%;
   margin: 0 auto;
 }
-#block-nc-theme-webform-2 .progress-marker::before {
-  background-color: #8B0000;
-}
-#block-nc-theme-webform-2 .webform-button--next.button.js-form-submit.form-submit.btn.btn-primary.form-control,
-#block-nc-theme-webform-2 .webform-button--previous.button.js-form-submit.form-submit.btn.btn-primary.form-control,
-#block-nc-theme-webform-2 .webform-button--preview.button.js-form-submit.form-submit.btn.btn-primary.form-control,
-#block-nc-theme-webform-2 .webform-button--submit.button.button--primary.js-form-submit.form-submit.btn.btn-primary.form-control,
-#block-nc-theme-webform-2 .webform-button--reset.button.js-form-submit.form-submit.btn.btn-primary.form-control {
-  background-color: #8B0000;
-}
 
 #block-nc-theme-webform-3 h2.block-title {
   text-align: center;
@@ -1306,15 +1296,9 @@ main [id] {
   width: 50%;
   margin: 0 auto;
 }
-#block-nc-theme-webform-3 .progress-marker::before {
-  background-color: #8B0000;
-}
-#block-nc-theme-webform-3 .webform-button--next.button.js-form-submit.form-submit.btn.btn-primary.form-control,
-#block-nc-theme-webform-3 .webform-button--previous.button.js-form-submit.form-submit.btn.btn-primary.form-control,
-#block-nc-theme-webform-3 .webform-button--preview.button.js-form-submit.form-submit.btn.btn-primary.form-control,
-#block-nc-theme-webform-3 .webform-button--submit.button.button--primary.js-form-submit.form-submit.btn.btn-primary.form-control,
-#block-nc-theme-webform-3 .webform-button--reset.button.js-form-submit.form-submit.btn.btn-primary.form-control {
-  background-color: #8B0000;
+
+.input-group {
+  visibility: hidden;
 }
 
 #block-nc-theme-mainnavigation {

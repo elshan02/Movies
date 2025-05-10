@@ -1,0 +1,27 @@
+// SCSS file for Celebrities view mode
+
+.contextual-region.node.node--type-actor-actress.node--promoted.node--view-mode-actor-actress-card  // Actor and Actress card
+{
+    img
+    {
+        width: 300px;  
+        height: auto;  
+        display: block;
+        margin: 0 auto; 
+    }
+}
+
+
+#block-nc-theme-webform-2 // 'Celebrity' webform
+{
+    h2.block-title  // 'Celebrity Request' title
+    {
+        text-align: center;
+    }
+
+    #webform-submission-actor-actress-request-form-ajax
+    {
+        width: 50%;  
+        margin: 0 auto;     // Centralizing the webform
+    }
+}

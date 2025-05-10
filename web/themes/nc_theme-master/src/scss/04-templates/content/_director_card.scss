@@ -12,19 +12,4 @@
         width: 50%;  
         margin: 0 auto;     // Centralizing the webform
     }
-
-    .progress-marker::before    // Progress Number
-    {
-        background-color: #8B0000;
-    }
-    
-    // Webform buttons
-    .webform-button--next.button.js-form-submit.form-submit.btn.btn-primary.form-control, // Next button
-    .webform-button--previous.button.js-form-submit.form-submit.btn.btn-primary.form-control, // Previous button
-    .webform-button--preview.button.js-form-submit.form-submit.btn.btn-primary.form-control,  // Preview button
-    .webform-button--submit.button.button--primary.js-form-submit.form-submit.btn.btn-primary.form-control,  // Submit button
-    .webform-button--reset.button.js-form-submit.form-submit.btn.btn-primary.form-control // Reset button
-    {
-        background-color: #8B0000;
-    }
 }
