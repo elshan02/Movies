@@ -1,16 +1,17 @@
-uuid: 9bf950c3-6c46-4407-ac9b-f73aba5928dc
+uuid: e3ff20c1-986c-4c34-b873-f677ffd9b536
 langcode: en
 status: true
 dependencies:
   module:
-    - block_field
+    - media
     - node
-id: node.field_movie_rating
-field_name: field_movie_rating
+id: node.field_movie_trailer
+field_name: field_movie_trailer
 entity_type: node
-type: block_field
-settings: {  }
-module: block_field
+type: entity_reference
+settings:
+  target_type: media
+module: core
 locked: false
 cardinality: 1
 translatable: true

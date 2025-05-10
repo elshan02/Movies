@@ -10,7 +10,7 @@ id: node.director.field_favorite_movies
 field_name: field_favorite_movies
 entity_type: node
 bundle: director
-label: 'Favorite Movies'
+label: Movies
 description: ''
 required: false
 translatable: false

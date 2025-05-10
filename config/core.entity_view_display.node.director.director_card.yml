@@ -1,0 +1,58 @@
+uuid: 32baa849-a5f1-466d-a2c7-2d79e90c06ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.director_card
+    - field.field.node.director.field_about_director
+    - field.field.node.director.field_favorite_movies
+    - field.field.node.director.field_image_of_the_director
+    - field.field.node.director.field_occupations
+    - node.type.director
+  module:
+    - image
+    - layout_builder
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.director.director_card
+targetEntityType: node
+bundle: director
+mode: director_card
+content:
+  field_favorite_movies:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_image_of_the_director:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_occupations:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_about_director: true

@@ -1,0 +1,37 @@
+uuid: ec8f25eb-0e4d-4fae-9298-6732fdc18ff5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.genres.field_auto_genre_page_url
+    - field.field.taxonomy_term.genres.field_tmdb_genre_id
+    - taxonomy.vocabulary.genres
+  module:
+    - link
+    - text
+id: taxonomy_term.genres.default
+targetEntityType: taxonomy_term
+bundle: genres
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_auto_genre_page_url:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_tmdb_genre_id: true

@@ -1,0 +1,11 @@
+uuid: ee860747-8025-429c-a39e-d4bfa72d06c5
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.movie_genres
+label: 'Movie Genres'
+description: 'View mode for Movie Genres'
+targetEntityType: taxonomy_term
+cache: true

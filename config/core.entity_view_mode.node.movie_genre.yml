@@ -1,0 +1,11 @@
+uuid: 099b89cb-06ea-4f21-9c93-91e98d63e181
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.movie_genre
+label: 'Movie Genre'
+description: ''
+targetEntityType: node
+cache: true

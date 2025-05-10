@@ -11,7 +11,7 @@ _core:
 id: nc_theme_help
 theme: nc_theme
 region: alerts
-weight: 0
+weight: -1
 provider: null
 plugin: help_block
 settings:

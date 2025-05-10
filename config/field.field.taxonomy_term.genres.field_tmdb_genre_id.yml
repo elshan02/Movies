@@ -1,0 +1,23 @@
+uuid: 02f80ba2-735f-4b57-80ac-d9710e8f58dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_tmdb_genre_id
+    - taxonomy.vocabulary.genres
+id: taxonomy_term.genres.field_tmdb_genre_id
+field_name: field_tmdb_genre_id
+entity_type: taxonomy_term
+bundle: genres
+label: 'TMDB Genre ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

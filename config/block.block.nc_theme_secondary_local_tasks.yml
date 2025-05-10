@@ -9,7 +9,7 @@ _core:
 id: nc_theme_secondary_local_tasks
 theme: nc_theme
 region: alerts
-weight: -2
+weight: -3
 provider: null
 plugin: local_tasks_block
 settings:

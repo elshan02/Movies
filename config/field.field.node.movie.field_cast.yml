@@ -10,7 +10,7 @@ id: node.movie.field_cast
 field_name: field_cast
 entity_type: node
 bundle: movie
-label: Cast
+label: Stars
 description: ''
 required: false
 translatable: false

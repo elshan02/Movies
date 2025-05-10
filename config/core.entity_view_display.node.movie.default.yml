@@ -3,21 +3,26 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.movie.feeds_item
     - field.field.node.movie.field_cast
     - field.field.node.movie.field_description
     - field.field.node.movie.field_director
     - field.field.node.movie.field_movie_genre
     - field.field.node.movie.field_movie_poster
-    - field.field.node.movie.field_movie_rating
+    - field.field.node.movie.field_movie_poster_node
+    - field.field.node.movie.field_movie_trailer
     - field.field.node.movie.field_quote
     - field.field.node.movie.field_release_year
     - node.type.movie
   module:
-    - block_field
-    - entity_reference_revisions
     - image
+    - layout_builder
     - user
     - yearonly
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
 id: node.movie.default
 targetEntityType: node
 bundle: movie
@@ -25,7 +30,7 @@ mode: default
 content:
   field_cast:
     type: entity_reference_label
-    label: above
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
@@ -33,14 +38,14 @@ content:
     region: content
   field_description:
     type: basic_string
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 2
+    weight: 4
     region: content
   field_director:
     type: entity_reference_label
-    label: above
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
@@ -48,13 +53,13 @@ content:
     region: content
   field_movie_genre:
     type: entity_reference_label
-    label: above
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
-    weight: 7
+    weight: 3
     region: content
-  field_movie_poster:
+  field_movie_poster_node:
     type: image
     label: hidden
     settings:
@@ -65,32 +70,28 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
-  field_movie_rating:
-    type: block_field
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 8
-    region: content
-  field_quote:
-    type: entity_reference_revisions_entity_view
-    label: above
+  field_movie_trailer:
+    type: entity_reference_entity_view
+    label: hidden
     settings:
       view_mode: default
-      link: ''
+      link: false
     third_party_settings: {  }
-    weight: 4
+    weight: 2
     region: content
   field_release_year:
     type: yearonly_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 3
+    weight: 7
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
     weight: 0
     region: content
-hidden: {  }
+hidden:
+  feeds_item: true
+  field_movie_poster: true
+  field_quote: true

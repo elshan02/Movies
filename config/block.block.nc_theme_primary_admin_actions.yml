@@ -9,7 +9,7 @@ _core:
 id: nc_theme_primary_admin_actions
 theme: nc_theme
 region: alerts
-weight: -5
+weight: -9
 provider: null
 plugin: local_actions_block
 settings:

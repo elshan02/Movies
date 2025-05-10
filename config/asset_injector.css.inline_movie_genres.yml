@@ -1,0 +1,31 @@
+uuid: b44b34ec-9046-48b5-9f8a-38bc4c39180c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: inline_movie_genres
+label: 'Inline Movie Genres'
+code: |
+  .movie-genres li{
+  	display: inline;
+  	text-align: center;
+  	margin: 10px;
+  }
+
+  .movie-genres {
+  	text-align: center;
+  	margin-top: 15px;
+  }
+media: all
+preprocess: true
+conditions:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      movie: movie
+contexts: {  }
+conditions_require_all: true

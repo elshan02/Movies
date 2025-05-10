@@ -1,0 +1,28 @@
+uuid: 114157f7-158a-4561-830e-5af5e81ccddc
+langcode: en
+status: true
+dependencies:
+  module:
+    - movie_ratings
+    - node
+  theme:
+    - nc_theme
+id: nc_theme_movieratingblock
+theme: nc_theme
+region: content
+weight: 0
+provider: null
+plugin: movie_rating_block
+settings:
+  id: movie_rating_block
+  label: 'Movie Rating Block'
+  label_display: visible
+  provider: movie_ratings
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      movie: movie

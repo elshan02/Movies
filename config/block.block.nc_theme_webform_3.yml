@@ -1,0 +1,31 @@
+uuid: cf314658-d723-4ea3-88f3-caa7bd1c29ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - webform.webform.director_request
+  module:
+    - system
+    - webform
+  theme:
+    - nc_theme
+id: nc_theme_webform_3
+theme: nc_theme
+region: featured_bottom
+weight: 0
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: 'Director Request'
+  label_display: visible
+  provider: webform
+  webform_id: director_request
+  default_data: ''
+  redirect: false
+  lazy: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /director-card

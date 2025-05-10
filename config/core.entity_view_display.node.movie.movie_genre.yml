@@ -1,0 +1,56 @@
+uuid: d9f17552-9411-4afa-9516-3276b7f721cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.movie_genre
+    - field.field.node.movie.feeds_item
+    - field.field.node.movie.field_cast
+    - field.field.node.movie.field_description
+    - field.field.node.movie.field_director
+    - field.field.node.movie.field_movie_genre
+    - field.field.node.movie.field_movie_poster
+    - field.field.node.movie.field_movie_poster_node
+    - field.field.node.movie.field_movie_trailer
+    - field.field.node.movie.field_quote
+    - field.field.node.movie.field_release_year
+    - node.type.movie
+  module:
+    - image
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.movie.movie_genre
+targetEntityType: node
+bundle: movie
+mode: movie_genre
+content:
+  field_movie_poster:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  feeds_item: true
+  field_cast: true
+  field_description: true
+  field_director: true
+  field_movie_genre: true
+  field_movie_poster_node: true
+  field_movie_trailer: true
+  field_quote: true
+  field_release_year: true

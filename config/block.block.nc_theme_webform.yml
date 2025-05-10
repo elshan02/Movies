@@ -11,8 +11,8 @@ dependencies:
     - nc_theme
 id: nc_theme_webform
 theme: nc_theme
-region: sidebar_second
-weight: 0
+region: featured_bottom
+weight: -9
 provider: null
 plugin: webform_block
 settings:

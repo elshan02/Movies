@@ -1,0 +1,26 @@
+uuid: f450fd05-24c1-44c9-a9ef-8267bb44fe18
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.movie_genres
+    - field.field.taxonomy_term.genres.field_auto_genre_page_url
+    - field.field.taxonomy_term.genres.field_tmdb_genre_id
+    - taxonomy.vocabulary.genres
+  module:
+    - text
+id: taxonomy_term.genres.movie_genres
+targetEntityType: taxonomy_term
+bundle: genres
+mode: movie_genres
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_auto_genre_page_url: true
+  field_tmdb_genre_id: true

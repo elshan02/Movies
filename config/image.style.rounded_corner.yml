@@ -1,0 +1,7 @@
+uuid: 308f149c-5814-4365-9bd9-bcb83e3c1307
+langcode: en
+status: true
+dependencies: {  }
+name: rounded_corner
+label: 'Rounded Corner'
+effects: {  }

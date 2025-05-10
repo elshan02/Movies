@@ -1,0 +1,30 @@
+uuid: ffc7cebb-42f3-443c-8fc1-e1bec909517f
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:47e2acda-c7eb-40a3-816e-2df7ac48d8f4'
+  module:
+    - block_content
+    - system
+  theme:
+    - nc_theme
+id: nc_theme_viewmodeswitcher
+theme: nc_theme
+region: masthead
+weight: -10
+provider: null
+plugin: 'block_content:47e2acda-c7eb-40a3-816e-2df7ac48d8f4'
+settings:
+  id: 'block_content:47e2acda-c7eb-40a3-816e-2df7ac48d8f4'
+  label: 'Quick Links'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "<front>\r\n/actor-actress-card\r\n/director-card\r\n/action-movies\r\n/adventure-movies\r\n/animations\r\n/comedy-movies\r\n/crime-movies\r\n/documentaries\r\n/drama-movies\r\n/family-movies\r\n/fantasy-movies\r\n/history-movies\r\n/horror-movies\r\n/musical-movies\r\n/mystery-movies\r\n/romance-movies\r\n/sci-fi-movies\r\n/thriller-movies\r\n/war-movies\r\n/western-movies"

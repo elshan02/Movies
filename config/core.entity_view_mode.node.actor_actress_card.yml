@@ -1,0 +1,11 @@
+uuid: 89e2a60b-d5c8-4d76-966c-c5ed9ef6aa75
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.actor_actress_card
+label: 'Actor/Actress Card'
+description: ''
+targetEntityType: node
+cache: true

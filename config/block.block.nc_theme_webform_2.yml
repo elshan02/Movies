@@ -1,0 +1,31 @@
+uuid: fbbb2d17-10a1-4810-80a6-df10c19ccd6c
+langcode: en
+status: true
+dependencies:
+  config:
+    - webform.webform.actor_actress_request
+  module:
+    - system
+    - webform
+  theme:
+    - nc_theme
+id: nc_theme_webform_2
+theme: nc_theme
+region: featured_bottom
+weight: -8
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: 'Celebrity Request'
+  label_display: visible
+  provider: webform
+  webform_id: actor_actress_request
+  default_data: ''
+  redirect: false
+  lazy: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /celebrities-card

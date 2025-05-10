@@ -1,0 +1,22 @@
+uuid: 27b28460-8a9a-4908-a8d3-a8083a6afdd2
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: movie_genre
+label: 'Movie Genre'
+type: 'canonical_entities:taxonomy_term'
+pattern: '[term:vocabulary]/[term:name]'
+selection_criteria:
+  b3ae4f44-8589-4e8f-a527-12a48101413e:
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: b3ae4f44-8589-4e8f-a527-12a48101413e
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      genres: genres
+selection_logic: and
+weight: -5
+relationships: {  }

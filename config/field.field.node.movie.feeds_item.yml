@@ -1,0 +1,23 @@
+uuid: a12041ea-6790-4239-8da4-134c0d28052b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.feeds_item
+    - node.type.movie
+  module:
+    - feeds
+id: node.movie.feeds_item
+field_name: feeds_item
+entity_type: node
+bundle: movie
+label: 'Feeds item'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:feeds_feed'
+  handler_settings: {  }
+field_type: feeds_item

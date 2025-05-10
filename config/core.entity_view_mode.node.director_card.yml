@@ -1,0 +1,11 @@
+uuid: a79decd4-a7af-4ef9-82d8-ae5c04a87e47
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.director_card
+label: 'Director Card'
+description: ''
+targetEntityType: node
+cache: true
