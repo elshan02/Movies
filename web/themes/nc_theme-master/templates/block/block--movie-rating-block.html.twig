@@ -1,0 +1,17 @@
+{#
+    Custom template for the 'Movie Rating average custom block'
+#}
+
+<div{{ attributes.addClass('block__movie_rating') }}>
+  {{ title_prefix }}
+  {% if label %}
+    <div{{ title_attributes.addClass('block__movie_rating_title') }}>
+        {{ label }}
+    </div>
+  {% endif %}
+  {{ title_suffix }}
+
+  <div{{ content_attributes.addClass('block__avg_rating') }}>
+    {{ content }}
+  </div>
+</div>

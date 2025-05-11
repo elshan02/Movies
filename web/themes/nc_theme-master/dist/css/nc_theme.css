@@ -1330,10 +1330,6 @@ h2.mt-0 {
   visibility: hidden;
 }
 
-.field__label {
-  text-align: center;
-}
-
 .field.field--name-field-description.field--type-string-long.field--label-above {
   margin-top: 5%;
 }
@@ -1367,10 +1363,13 @@ h2.mt-0 {
   left: 40px;
 }
 
-.block-title {
+#block-nc-theme-movieratingblock {
+  margin: 0;
+  margin-left: 20%;
+}
+
+.block__movie_rating_title {
   visibility: hidden;
-  margin-bottom: 0;
-  height: 60px;
 }
 
 div[region=content] {
@@ -1383,16 +1382,22 @@ div[region=content] {
   height: 100px;
 }
 
-.field.field--name-field-media-oembed-video.field--type-string.field--label-hidden.field__item {
-  width: 61%;
-  height: auto;
-  margin-left: 25rem;
+.btn.btn-primary {
+  position: absolute;
+  bottom: 14.5rem;
+  right: 18rem;
 }
 
 .field.field--name-field-movie-poster-node.field--type-image.field--label-hidden.field__item {
   float: left;
   margin: 1px;
   margin-left: 117px;
+}
+
+.field.field--name-field-media-oembed-video.field--type-string.field--label-hidden.field__item {
+  width: 61%;
+  height: auto;
+  margin-left: 25rem;
 }
 
 .movie-genres {
@@ -1404,6 +1409,10 @@ div[region=content] {
 .movie-stars li {
   float: left;
   flex-wrap: wrap;
+}
+
+.field__label__description {
+  visibility: hidden;
 }
 
 .movie-stars {
@@ -1435,19 +1444,9 @@ div[region=content] {
   margin-top: 5px;
 }
 
-.field__label__description {
-  visibility: hidden;
-}
-
-#block-nc-theme-movieratingblock {
-  margin: 0;
-  margin-left: 20%;
-}
-
-.btn.btn-primary {
-  position: absolute;
-  bottom: 17rem;
-  right: 18rem;
+.field__release_year {
+  display: flex;
+  gap: 0.5rem;
 }
 
 .button.js-form-submit.form-submit.btn.btn-primary.form-control {
@@ -1456,11 +1455,6 @@ div[region=content] {
 
 .button.back-button-class {
   margin: 10px;
-}
-
-.field__release_year {
-  display: flex;
-  gap: 0.5rem;
 }
 
 .views-field.views-field-title {

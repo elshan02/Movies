@@ -11,7 +11,7 @@
     margin-left: 16rem;
 }
 
-#superfish-main             // Quick Links
+#superfish-main             // Superfish Menu
 {
     margin-left: 6rem;
 }
@@ -43,18 +43,14 @@ h2.mt-0  // Movie content type titles
     visibility: hidden;
 }
 
-
-.field__label  // Movie content type 'Description' title
-{
-    text-align: center;
-}
-
-.field.field--name-field-description.field--type-string-long.field--label-above  // Movie content type 'Description' field
+// Movie content type 'Description' field
+.field.field--name-field-description.field--type-string-long.field--label-above
 {
     margin-top: 5%;
 }
 
-.contextual-region.node.node--type-movie.node--promoted.node--view-mode-movie-card // Movie content type block
+// Movie content type block
+.contextual-region.node.node--type-movie.node--promoted.node--view-mode-movie-card
 {
     margin: 10px;
 }

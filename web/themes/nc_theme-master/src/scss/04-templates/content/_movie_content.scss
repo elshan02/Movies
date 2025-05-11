@@ -5,20 +5,24 @@
     visibility: hidden;     
 }
 
-.main_navigation
+.main_navigation        // Main navigations menu 
 {
     position: relative;
     left: 40px;
 }
 
-.block-title        // Movie Average Rating block title
+#block-nc-theme-movieratingblock        // Movie Rating custom block
 {
-    visibility: hidden;
-    margin-bottom: 0;
-    height: 60px;
+    margin: 0;
+    margin-left: 20%;
 }
 
-div[region="content"]
+.block__movie_rating_title        // Movie Average Rating block title
+{
+    visibility: hidden;
+}
+
+div[region="content"]       // Average Rating region
 {
     width: 200px;
 }
@@ -30,18 +34,27 @@ div[region="content"]
     height: 100px;
 }
 
-
-.field.field--name-field-media-oembed-video.field--type-string.field--label-hidden.field__item // Node Movie Trailer
+.btn.btn-primary        // Rate button
 {
-    width: 61%;  
-    height: auto;  
-    margin-left: 25rem;  
+    position: absolute;
+    bottom: 14.5rem;
+    right: 18rem;
 }
-.field.field--name-field-movie-poster-node.field--type-image.field--label-hidden.field__item // Node Movie Poster
+
+// Movie Poster
+.field.field--name-field-movie-poster-node.field--type-image.field--label-hidden.field__item 
 {
     float: left;
     margin: 1px;
     margin-left: 117px;
+}
+
+// Movie Trailer
+.field.field--name-field-media-oembed-video.field--type-string.field--label-hidden.field__item
+{
+    width: 61%;  
+    height: auto;  
+    margin-left: 25rem;  
 }
 
 .movie-genres       // Movie Genres field
@@ -57,26 +70,31 @@ div[region="content"]
     flex-wrap: wrap;
 }
 
-.movie-stars    // Movie Stars ul class
+.field__label__description      // Description field label
+{
+    visibility: hidden;
+}
+
+.movie-stars    // Movie ul class
 {
     position: relative;
     list-style-type: none;
     bottom: 10px;
 }
 
-.movie-stars li
+.movie-stars li    // Movie Stars li class
 {
     margin: 10px;
 }
 
 .field__director,   // Director field
-.field__stars        // Cast field
+.field__stars        // Stars field
 {
     display: flex;
     flex-wrap: wrap;
 }
 
-.field__stars
+.field__stars       // Stars field
 {
     height: 40px;
 }
@@ -92,37 +110,19 @@ div[region="content"]
     margin-top: 5px;
 }
 
-
-.field__label__description      // Description field label
-{
-    visibility: hidden;
-}
-
-#block-nc-theme-movieratingblock        // Movie Rating custom block
-{
-    margin: 0;
-    margin-left: 20%;
-}
-
-.btn.btn-primary        // Rate button
-{
-    position: absolute;
-    bottom: 17rem;
-    right: 18rem;
-}
-
-.button.js-form-submit.form-submit.btn.btn-primary.form-control     // Submit button
-{
-    position: inherit;
-}
-
-.button.back-button-class       // Go back movie link
-{
-    margin: 10px;
-}
-
 .field__release_year  // Release year
 {
     display: flex;
     gap: 0.5rem;
 }
+
+// Movie Rating page
+    .button.js-form-submit.form-submit.btn.btn-primary.form-control     // Submit button
+    {
+        position: inherit;
+    }
+
+    .button.back-button-class       // Go back movie link
+    {
+        margin: 10px;
+    }
