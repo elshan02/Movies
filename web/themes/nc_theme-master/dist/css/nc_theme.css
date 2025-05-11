@@ -1377,6 +1377,7 @@ div[region=content] {
 }
 
 #block-nc-theme-movieratingblock {
+  position: relative;
   left: 40rem;
   width: 100px;
   height: 100px;

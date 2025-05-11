@@ -101,3 +101,6 @@ NOTES.md
 
 # Ignore .env file for api keys
 .env
+
+# Ignore the old northern theme
+/web/themes/northern-theme-old/
