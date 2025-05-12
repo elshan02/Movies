@@ -1,6 +1,12 @@
 // SCSS file for Celebrities view mode
 
-.contextual-region.node.node--type-actor-actress.node--promoted.node--view-mode-actor-actress-card  // Actor and Actress card
+.field__label       // Movies and Shows title
+{
+    text-align: center;
+}
+
+// Celebrities card
+.contextual-region.node.node--type-actor-actress.node--promoted.node--view-mode-actor-actress-card 
 {
     img
     {

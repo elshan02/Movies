@@ -1274,6 +1274,10 @@ main [id] {
   }
 }
 
+.field__label {
+  text-align: center;
+}
+
 .contextual-region.node.node--type-actor-actress.node--promoted.node--view-mode-actor-actress-card img {
   width: 300px;
   height: auto;
