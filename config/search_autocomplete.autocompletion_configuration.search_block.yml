@@ -1,0 +1,23 @@
+uuid: 9bc3dbf3-4289-4c08-b98a-2113fbf59b0d
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: LnwqYHNigFBoobk_QbWntpSed5PgVj_0Ild5zXL2-TQ
+id: search_block
+label: 'Search Block'
+selector: ''
+minChar: 3
+autoSubmit: true
+autoRedirect: true
+maxSuggestions: 10
+noResultLabel: 'No results found for [search-phrase]. Click to perform full search.'
+noResultValue: '[search-phrase]'
+noResultLink: ''
+moreResultsLabel: 'View all results for [search-phrase].'
+moreResultsValue: '[search-phrase]'
+moreResultsLink: ''
+source: 'autocompletion_callbacks_nodes::nodes_autocompletion_callback'
+theme: basic.css
+editable: true
+deletable: false

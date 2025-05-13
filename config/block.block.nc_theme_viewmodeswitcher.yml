@@ -12,7 +12,7 @@ dependencies:
 id: nc_theme_viewmodeswitcher
 theme: nc_theme
 region: masthead
-weight: -10
+weight: -9
 provider: null
 plugin: 'block_content:47e2acda-c7eb-40a3-816e-2df7ac48d8f4'
 settings:

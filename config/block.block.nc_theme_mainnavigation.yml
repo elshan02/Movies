@@ -11,7 +11,7 @@ dependencies:
 id: nc_theme_mainnavigation
 theme: nc_theme
 region: masthead
-weight: -9
+weight: -10
 provider: null
 plugin: 'superfish:main'
 settings:

@@ -55,6 +55,10 @@ module:
   rest: 0
   restui: 0
   search: 0
+  search_api: 0
+  search_api_autocomplete: 0
+  search_api_db: 0
+  search_autocomplete: 0
   serialization: 0
   shortcut: 0
   superfish: 0

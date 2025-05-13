@@ -1,0 +1,30 @@
+uuid: a552d87c-9db3-41ca-97c9-4d51067bbeb7
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.index.content
+    - views.view.custom_search_api
+  module:
+    - views
+id: custom_search_api
+label: 'Custom Search API'
+index_id: content
+suggester_settings:
+  server:
+    fields: {  }
+suggester_weights:
+  server: 0
+suggester_limits: {  }
+search_settings:
+  'views:custom_search_api':
+    displays:
+      default: true
+      selected: {  }
+options:
+  limit: 10
+  min_length: 3
+  show_count: false
+  delay: null
+  submit_button_selector: ':submit'
+  autosubmit: true

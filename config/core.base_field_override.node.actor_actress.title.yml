@@ -8,7 +8,7 @@ id: node.actor_actress.title
 field_name: title
 entity_type: node
 bundle: actor_actress
-label: 'Full name of actor/actress'
+label: 'Full name of celebrity'
 description: ''
 required: true
 translatable: true
