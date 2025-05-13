@@ -42,7 +42,9 @@
         "drupal/superfish": "^1.11",
         "drupal/jquery_ui": "^1.7",
         "drupal/tb_megamenu": "^1.9",
-        "vlucas/phpdotenv": "^5.6"
+        "vlucas/phpdotenv": "^5.6",
+        "drupal/search_api": "^1.38",
+        "drupal/search_autocomplete": "^4.0"
     },
     "require-dev": {
         "drupal/core-dev": "^11"
