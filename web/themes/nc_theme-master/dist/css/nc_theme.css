@@ -1319,6 +1319,26 @@ h1.page-title.mt-0.mb-0 {
   text-align: center;
 }
 
+.block__movie_search_title {
+  visibility: hidden;
+}
+
+label[for=edit-search-api-fulltext], .fieldset-default legend[for=edit-search-api-fulltext],
+.fieldset-radio legend[for=edit-search-api-fulltext],
+.fieldset-checkbox legend[for=edit-search-api-fulltext] {
+  visibility: hidden;
+}
+
+.form-actions.views-exposed-form__item.views-exposed-form__item--actions.js-form-wrapper.form-wrapper {
+  position: relative;
+  bottom: 22.6rem;
+  left: 19rem;
+}
+
+.view-empty {
+  visibility: hidden;
+}
+
 h2.mt-0 {
   font-size: 100%;
   text-align: center;
@@ -1340,10 +1360,6 @@ h2.mt-0 {
 
 .contextual-region.node.node--type-movie.node--promoted.node--view-mode-movie-card {
   margin: 10px;
-}
-
-.views-col.col-1 .field.field--name-field-description.field--type-string-long.field--label-above {
-  margin-top: 6%;
 }
 
 .field__item {

@@ -21,6 +21,30 @@ h1.page-title.mt-0.mb-0  // 'Home Page' title
     font-size: 140%;
     text-align: center;
 }
+ // Search API
+
+    .block__movie_search_title      // Movie Search title
+    {
+        visibility: hidden;
+    }
+
+    label[for="edit-search-api-fulltext"]  // Search (optional) title
+    {
+        visibility: hidden;
+    }
+
+    // Search button
+    .form-actions.views-exposed-form__item.views-exposed-form__item--actions.js-form-wrapper.form-wrapper
+    {
+        position: relative;
+        bottom: 22.6rem;
+        left: 19rem;
+    }
+
+    .view-empty         // Info about search API
+    {
+        visibility: hidden;
+    }
 
 h2.mt-0  // Movie content type titles
 {
@@ -53,15 +77,6 @@ h2.mt-0  // Movie content type titles
 .contextual-region.node.node--type-movie.node--promoted.node--view-mode-movie-card
 {
     margin: 10px;
-}
-
-
-.views-col.col-1 // Arrival movie content
-{
-    .field.field--name-field-description.field--type-string-long.field--label-above  // Description field
-    {
-        margin-top: 6%;         
-    }
 }
     
 .field__item // Field items of Movie content type

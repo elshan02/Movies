@@ -1,0 +1,17 @@
+{#
+    Custom template for the 'Custom Movie Search API block'
+#}
+
+<div{{ attributes.addClass('block__movie_search') }}>
+    {{ title_prefix }}
+    {% if label %}
+        <div {{title_attributes.addClass('block__movie_search_title') }}>
+            {{ label }}
+        </div>
+    {% endif %}
+    {{ title_suffix }}
+
+    <div {{ attributes.addClass('block__movie_search_bar') }}>
+        {{ content }}
+    </div>
+</div>
