@@ -35,5 +35,11 @@ jobs:
         git merge pantheon/master --allow-unrelated-histories --no-edit
         git push pantheon HEAD:master
         commit_message=$(git log -1 --pretty=%B)
+
+        # Deploy code to Test and Live
         terminus env:deploy $pantheon_site_name.test --note="Automated deploy: $commit_message"
         terminus env:deploy $pantheon_site_name.live --note="Automated deploy: $commit_message"
+        
+        # Import configuration on test and live
+        terminus drush $pantheon_site_name.test -- cim -y
+        terminus drush $pantheon_site_name.live -- cim -y
