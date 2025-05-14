@@ -3,11 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.taxonomy_term.genres.field_auto_genre_page_url
     - field.field.taxonomy_term.genres.field_tmdb_genre_id
     - taxonomy.vocabulary.genres
   module:
-    - link
     - path
     - text
 id: taxonomy_term.genres.default
@@ -22,14 +20,6 @@ content:
     settings:
       size: 60
       placeholder: ''
-    third_party_settings: {  }
-  field_auto_genre_page_url:
-    type: link_default
-    weight: 102
-    region: content
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
     third_party_settings: {  }
   field_tmdb_genre_id:
     type: number
