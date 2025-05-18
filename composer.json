@@ -46,7 +46,8 @@
         "drupal/search_api": "^1.38",
         "drupal/search_autocomplete": "^4.0",
         "drupal/search_api_autocomplete": "^1.10",
-        "drupal/redirect": "^1.11"
+        "drupal/redirect": "^1.11",
+        "drupal/simple_popup_blocks": "^3.5"
     },
     "require-dev": {
         "drupal/core-dev": "^11"
